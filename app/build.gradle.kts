@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "edu.niu.android.emailchecker"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "edu.niu.android.emailchecker"
