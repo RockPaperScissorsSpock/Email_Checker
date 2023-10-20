@@ -1,35 +1,36 @@
 package edu.niu.android.emailchecker;
 
+import android.os.Bundle;
+import android.text.TextWatcher;
+import android.text.Editable;
+import android.widget.Button;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+public class MainActivity extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity
-{
-    private EmailChecker emailChecker;
-
-    public EditText emailEditText;
-    public Button subButton;
-    public TextView statusLabel;
+    private EmailChecker model;
+    private UIView view;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.app_name);
 
-        EmailChecker = new EmailChecker();          //Call Constructor.
-        setContentView(R.layout.activity_main);
+        model = new EmailChecker();
+        ButtonHandler bh = new ButtonHandler();
+        view = new UIView(this, bh);
+        setContentView(view);
+    }
 
-        emailEditText = findViewById(email);
-
-        statusLabel = findViewById(status);
-
-
-
-
+    private class ButtonHandler implements View.OnClickListener
+    {
+        public void onClick(View v)
+        {
+            String email = view.getEmailText();
+            boolean valEmail = model.validEmail(email);
+            view.validEmailUpdate(valEmail);
+        }
     }
 }
