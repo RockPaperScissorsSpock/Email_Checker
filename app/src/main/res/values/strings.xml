@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Email Checker</string>
+    <string name="app_name">EmailChecker</string>
+    <string name="emailIndicator">Status</string>
+    <string name="emailEntry">Enter a valid email.</string>
+    <string name="submit">SUBMIT</string>
 </resources>
