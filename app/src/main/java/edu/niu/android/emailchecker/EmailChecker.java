@@ -1,3 +1,13 @@
+/*******************************************************************************************
+ *                                                                                         *
+ *  Class Name: UIView                                                                     *
+ *                                                                                         *
+ *     Purpose: This class sets up the Model for the app. It has only one method which     *
+ *     checks the email that was entered for a @ symbol followed by a "." and returns      *
+ *     a boolean.                                                                          *
+ *                                                                                         *
+ ******************************************************************************************/
+
 package edu.niu.android.emailchecker;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
@@ -11,20 +21,6 @@ import android.widget.Button;
 
 public class EmailChecker
 {
-    /*
-    private String Email;
-
-    //Constructer.
-    public EmailChecker()
-    {
-        Email = this.Email;
-    }
-/*
-    public void SetEmail(String Email)
-    {
-        this.Email = Email;
-    }
-*/
     //Check if Email is Valid.
     public Boolean validEmail(String email)
     {
