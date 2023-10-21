@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.EmailChecker" parent="Base.Theme.EmailChecker" />
+
+    <style name="buttonStyle">
+        // Set text size
+        <item name="android:textSize">18sp</item>
+        //Set text color
+        <item name="android:textColor">@color/green</item>
+    </style>
 </resources>

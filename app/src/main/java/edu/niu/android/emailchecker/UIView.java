@@ -66,6 +66,10 @@ public class UIView extends GridLayout{
         submit.setText(R.string.submit);
         addView(submit);
         submit.setOnClickListener(listener);
+
+
+        submit.setTextColor(getResources().getColor(R.color.button_text_color));
+
     }
 
     // Returns the user's email entry
